@@ -131,7 +131,7 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 
 ---
 
-## 🔗 Tech Stack
+## 🔗 Tech Stack(version will be updated)
 
 ### Backend
 
