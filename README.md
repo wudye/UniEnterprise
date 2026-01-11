@@ -6,6 +6,32 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 
 ---
 
+
+
+
+## Project Highlights
+### 🎓 Education & Training
+- Complete business modules for teaching and learning
+- Well-documented code with clear architecture
+- Best practices and design patterns
+
+### 🏢 Industry & Business
+- Production-ready codebase
+- Scalable architecture
+- Comprehensive business features
+
+### 🔧 Modular Design
+- Select only the modules you need
+- Easy to customize and extend
+- Quick start for new projects
+
+### 🌍 International Support
+- Multi-language support (De/EN/CN)
+- Timezone handling
+- Multi-currency support (for e-commerce)
+
+---
+
 ## Requirements
 1. All features are guaranteed high quality through unit testing.
 2. Clean code and clean architecture, following the coding standards of "Effective Java" and "Clean Code".
@@ -199,24 +225,3 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 - **User App:** ReactNative
 
 ---
-
-## Project Highlights
-### 🎓 Education & Training
-- Complete business modules for teaching and learning
-- Well-documented code with clear architecture
-- Best practices and design patterns
-
-### 🏢 Industry & Business
-- Production-ready codebase
-- Scalable architecture
-- Comprehensive business features
-
-### 🔧 Modular Design
-- Select only the modules you need
-- Easy to customize and extend
-- Quick start for new projects
-
-### 🌍 International Support
-- Multi-language support (De/EN/CN)
-- Timezone handling
-- Multi-currency support (for e-commerce)
