@@ -192,9 +192,8 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 |-----------|-------------|---------|
 | Java | Programming Language | 21 (LTS) |
 | Spring Cloud | Microservices Framework | 2024.0.0 |
-| Spring Cloud Alibaba | Cloud Integration | 2024.0.1.0 |
 | Spring Boot | Application Development Framework | 3.5.x |
-| Eureka | Configuration & Service Discovery |  |
+| Spring Cloud Eureka | Configuration & Service Discovery |  |
 | RocketMQ | Message Queue | 5.2.0+ |
 | Resilience4j | Service Protection | 2.2.0 |
 | XXL Job | Distributed Task Scheduling | 2.3.1 |
