@@ -13,23 +13,22 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 ---
 
 ## Key Features
-✅ Multi-JDK Support: Master branch (JDK 8 + Spring Boot 2.7), master-jdk17 branch (JDK 17/21 + Spring Boot 3.2)
-✅ Multiple Frontend Versions: Vue3 with element-plus or vben (ant-design-vue), Vue2 with element-ui
-✅ Mobile Admin: Uni-app solution supporting APP, Mini Program, and H5 from a single codebase
-✅ Multi-Database Support: MySQL, Oracle, PostgreSQL, SQL Server, MariaDB, Dameng DM, TiDB, etc.
-✅ Flexible Message Queue: Event, Redis, RabbitMQ, Kafka, RocketMQ, etc.
-✅ Advanced Authentication: Spring Security + Token + Redis, supports multi-terminal, multi-user, and SSO
-✅ Dynamic Permission Control: Dynamic menu loading, button-level permissions, Redis caching for performance
-✅ Multi-Tenant SaaS: Customizable permissions per tenant with transparent multi-tenant encapsulation
-✅ Flowable Workflow: Dynamic forms, online process design, countersignature/or-sign, multiple task allocation methods
-✅ Code Generator: One-click generation of Java, Vue, SQL scripts, API docs; supports single table, tree table, master-detail tables
-✅ Real-time Communication: Spring WebSocket with built-in token authentication and WebSocket cluster support
-✅ Third-Party Login: Facebook, Google, LinkedIn, Twitter/X, GitHub, etc.
-✅ Payment Integration: Stripe, PayPal, Braintree, Square with payment and refund support
-✅ SMS & Cloud Storage: Aliyun, Tencent Cloud SMS; MinIO, Aliyun, Tencent Cloud, Qiniu Cloud storage
-✅ Report Design: Report designer and dashboard designer for creating stunning reports via drag-and-drop
-✅ Built-in Business Modules: Mall, OA, ERP, CRM, CMS, BBS, AI Agent
-✅ Operation Logs & Audit Logs
+1. Multiple Frontend Versions: angular and react native
+2. Mobile Admin: React Native solution supporting APP, Mini Program, and H5 from a single codebase
+3. Multi-Database Support: MySQL, PostgreSQLetc.
+4. Flexible Message Queue: Event, Redis, RabbitMQ, Kafka, RocketMQ, etc.
+5. Advanced Authentication: Spring Security + Token + Redis, supports multi-terminal, multi-user, and SSO
+6. Dynamic Permission Control: Dynamic menu loading, button-level permissions, Redis caching for performance
+7. Multi-Tenant SaaS: Customizable permissions per tenant with transparent multi-tenant encapsulation
+8. Flowable Workflow: Dynamic forms, online process design, countersignature/or-sign, multiple task allocation methods
+9. Code Generator: One-click generation of Java, Vue, SQL scripts, API docs; supports single table, tree table, master-detail tables
+10. Real-time Communication: Spring WebSocket with built-in token authentication and WebSocket cluster support
+11. Third-Party Login: Facebook, Google, LinkedIn, Twitter/X, GitHub, etc.
+12. Payment Integration: Stripe, PayPal, Braintree, Square with payment and refund support
+13. SMS & Cloud Storage:  MinIO
+14. Report Design: Report designer and dashboard designer for creating stunning reports via drag-and-drop
+15. Built-in Business Modules: Mall, OA, ERP, CRM, CMS, BBS, AI Agent
+16. Operation Logs & Audit Logs
 
 ---
 
@@ -56,7 +55,7 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 
 | Submodule | Description |
 |-------------------------------------------------------|----------------------|
-| one-common                                            | Common base module that defines base POJO classes, enumerations, exception system, and utility classes. Provides unified API response formats (CommonResult, PageResult), pagination parameters (PageParam), global error code specifications, business exception handling, and common utility class collections (cache, collections, date, JSON, Spring, Servlet, etc.). Supports SkyWalking distributed tracing and data translation functionality. |
+| unienterprise-common                                            | Common base module that defines base POJO classes, enumerations, exception system, and utility classes. Provides unified API response formats (CommonResult, PageResult), pagination parameters (PageParam), global error code specifications, business exception handling, and common utility class collections (cache, collections, date, JSON, Spring, Servlet, etc.). Supports SkyWalking distributed tracing and data translation functionality. |
 | unienterprise-spring-boot-starter-security            | Security framework that provides unified authentication, authorization, token validation, multi-tenant security, cross-thread context propagation, and other core security capabilities. Supports OAuth2, JWT, and RBAC permission model. |
 | unienterprise-spring-boot-starter-biz-data-permission | Data permission framework starter that implements data permission control by parsing SQL with JSqlParser and dynamically appending WHERE conditions. Provides @DataPermission annotation-driven data permission rule system, supports department-based data permission filtering (department ID/user ID), custom data permission rule extension, annotation-level enable/disable permission control, and include/exclude rule priority configuration. Suitable for enterprise-level application data permission isolation scenarios. |
 | unienterprise-spring-boot-starter-biz-ip              | IP address and region information processing module that supports IP address to city information lookup (based on ip2region), regional tree structure management , region path formatting, and parent-child region queries. Suitable for geolocation identification, user access analysis, and data statistics scenarios. |
@@ -76,9 +75,13 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 
 ## Built-in Features
 
-Common Modules (Required): System Functions, Infrastructure
-Common Modules (Optional): Workflow Engine, Payment System, Data Reports, Member Center
-Business Systems (On-Demand): ERP System, CRM System, Mall System, Social Media Integration, AI Agent
+**Common Modules (Required):** System Functions, Infrastructure  
+**Common Modules (Optional):** Workflow Engine, Payment System, Data Reports, Member Center  
+**Business Systems (On-Demand):** ERP System, CRM System, Mall System, Social Media Integration, AI Agent
+
+### Architecture Diagram
+
+```
 ┌──────────────────────────────────────────────────────────────────┐
 │                          TOP LEVEL                               │
 │                     Business Systems                             │
@@ -97,8 +100,8 @@ Business Systems (On-Demand): ERP System, CRM System, Mall System, Social Media 
 │  │ System │ │ Infrastructure│ │  BPM  │ │ Payment │ │  Member   │  │
 │  └───┬────┘ └───────┬───────┘ └───┬───┘ └────┬────┘ └─────┬─────┘  │
 │  ┌───┴───────────────┴───────────┴───────┴─────────┴─────────────┐ │
-│  │         Visualization                                         │ │
-│  └─────────────────────────────────────────────────────────────────|
+│  │                 Visualization & Reports                       │ │
+│  └─────────────────────────────────────────────────────────────────┘ │
 └─────┼───────────────┼───────────────┼───────────────┼──────────────┘
       │               │               │               │
       └───────────────┴───────────────┴───────────────┘
@@ -121,9 +124,10 @@ Business Systems (On-Demand): ERP System, CRM System, Mall System, Social Media 
 │  └──────────┘ └───────┘ └──────────┘ └──────────────┘               │
 │                                                                     │
 │  ┌────────────────────────────────────────────────────┐             │
-│  │              Operate Log                           │             │
+│  │              Operation & Audit Logs                │             │
 │  └────────────────────────────────────────────────────┘             │
 └─────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -135,55 +139,59 @@ Business Systems (On-Demand): ERP System, CRM System, Mall System, Social Media 
 
 | Framework | Description | Version |
 |-----------|-------------|---------|
-| Spring Boot | Application Development Framework | 2.7.18 |
+| Java | Programming Language | 21 (LTS) |
+| Spring Boot | Application Development Framework | 3.5.x |
 | MySQL | Database Server | 5.7 / 8.0+ |
-| Druid | JDBC Connection Pool & Monitoring | 1.2.23 |
-| MyBatis Plus | MyBatis Enhancement Toolkit | 3.5.7 |
-| Dynamic Datasource | Dynamic Data Source | 3.6.1 |
-| Redis | Key-Value Database | 5.0 / 6.0 / 7.0 |
-| Redisson | Redis Client | 3.32.0 |
-| Spring MVC | MVC Framework | 5.3.24 |
-| Spring Security | Spring Security Framework | 5.7.11 |
-| Hibernate Validator | Parameter Validation | 6.2.5 |
-| Flowable | Workflow Engine | 6.8.0 |
-| Quartz | Task Scheduling | 2.3.2 |
-| Springdoc | Swagger Documentation | 1.7.0 |
-| SkyWalking | Distributed Tracing | 8.12.0 |
-| Spring Boot Admin | Spring Boot Monitoring | 2.7.10 |
-| Jackson | JSON Library | 2.13.5 |
+| HikariCP | JDBC Connection Pool & Monitoring | 5.1.0 |
+| Dynamic Datasource | Dynamic Data Source | 4.4.0 |
+| Redis | Key-Value Database | 7.0+ |
+| Redisson | Redis Client | 3.35.0 |
+| Spring MVC | MVC Framework | 6.1.x |
+| Spring Security | Spring Security Framework | 6.3.x |
+| Hibernate Validator | Parameter Validation | 8.0.1 |
+| Flowable | Workflow Engine | 6.9.0 |
+| Quartz | Task Scheduling | 2.5.0 |
+| Springdoc | Swagger Documentation | 2.3.0 |
+| SkyWalking | Distributed Tracing | 9.0.0 |
+| Spring Boot Admin | Spring Boot Monitoring | 3.5.x |
+| Jackson | JSON Library | 2.17.0 |
 | MapStruct | Java Bean Mapping | 1.6.3 |
 | Lombok | Reduce Boilerplate Code | 1.18.34 |
-| JUnit | Java Unit Testing | 5.8.2 |
-| Mockito | Java Mock Framework | 4.8.0 |
+| JUnit | Java Unit Testing | 5.10.1 |
+| Mockito | Java Mock Framework | 5.7.0 |
 
-#### Spring Cloud Alibaba (Microservices Architecture)
+#### Spring Cloud (Microservices Architecture)
 
 | Framework | Description | Version |
 |-----------|-------------|---------|
+| Java | Programming Language | 21 (LTS) |
 | Spring Cloud | Microservices Framework | 2024.0.0 |
-| Eureka | Configuration Center & Service Registry | 2.3.2 |
-| RocketMQ | Message Queue | 5.2.0 |
-| Resilience4j | Service Protection | 1.8.6 |
+| Spring Cloud Alibaba | Cloud Integration | 2024.0.1.0 |
+| Spring Boot | Application Development Framework | 3.5.x |
+| Eureka | Configuration & Service Discovery |  |
+| RocketMQ | Message Queue | 5.2.0+ |
+| Resilience4j | Service Protection | 2.2.0 |
 | XXL Job | Distributed Task Scheduling | 2.3.1 |
-| Spring Cloud Gateway | Service Gateway | 3.4.1 |
-| Spring cloud Stream ? | Distributed Transaction | 1.6.1 |
+| Spring Cloud Gateway | Service Gateway | 4.1.x |
+| Spring Cloud Stream | Message Stream Binder | 2024.0.0 |
+| Spring DTX | Distributed Transaction | 2.0.0 |
 | MySQL | Database Server | 5.7 / 8.0+ |
-| HikariCP | JDBC Connection Pool & Monitoring | 1.2.23 |
-| Dynamic Datasource | Dynamic Data Source | 4.3.1 |
-| Redis | Key-Value Database | 5.0 / 6.0 |
-| Redisson | Redis Client | 3.32.0 |
-| Spring MVC | MVC Framework | 5.3.24 |
-| Spring Security | Spring Security Framework | 5.7.5 |
-| Hibernate Validator | Parameter Validation | 6.2.5 |
-| Flowable | Workflow Engine | 6.8.0 |
+| HikariCP | JDBC Connection Pool & Monitoring | 5.1.0 |
+| Dynamic Datasource | Dynamic Data Source | 4.4.0 |
+| Redis | Key-Value Database | 7.0+ |
+| Redisson | Redis Client | 3.35.0 |
+| Spring MVC | MVC Framework | 6.1.x |
+| Spring Security | Spring Security Framework | 6.3.x |
+| Hibernate Validator | Parameter Validation | 8.0.1 |
+| Flowable | Workflow Engine | 6.9.0 |
 | Knife4j | Enhanced Swagger UI | 4.5.0 |
-| SkyWalking | Distributed Tracing | 8.12.0 |
-| Spring Boot Admin | Spring Boot Monitoring | 2.7.10 |
-| Jackson | JSON Library | 2.13.3 |
+| SkyWalking | Distributed Tracing | 9.0.0 |
+| Spring Boot Admin | Spring Boot Monitoring | 3.5.x |
+| Jackson | JSON Library | 2.17.0 |
 | MapStruct | Java Bean Mapping | 1.6.3 |
 | Lombok | Reduce Boilerplate Code | 1.18.34 |
-| JUnit | Java Unit Testing | 5.8.2 |
-| Mockito | Java Mock Framework | 4.8.0 |
+| JUnit | Java Unit Testing | 5.10.1 |
+| Mockito | Java Mock Framework | 5.7.0 |
 
 ### Frontend
 
