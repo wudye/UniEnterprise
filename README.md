@@ -6,7 +6,9 @@ The project can be used for e-commerce malls, SCRM systems, OA systems, logistic
 
 ---
 
-
+# Spring cloud version -> dida -cloud
+1. spring boot version -> 3.5.10
+2. java version -> 21
 
 
 ## Project Highlights
